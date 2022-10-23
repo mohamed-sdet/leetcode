@@ -1,0 +1,64 @@
+	/* Traverse and loop through the array until k element 
+	 * find the vowels and store the count with compare of min integer value 
+	 * now use another for loop then remove first index then add index 
+	 * iterate  the same and return max value of vowels 
+	 */
+	
+	
+	@Test
+	public void exampleData1()
+	{
+		String s = "workaattech";
+		int k =3;
+		Vowelsmaxcountwithkelementbruteforce(s,k);
+	}
+	
+	
+	public void Vowelsmaxcountwithkelementbruteforce(String s, int k)
+	{
+		
+		char[] ch = s.toCharArray();
+		int maxValue = Integer.MIN_VALUE;
+		int total=0;
+		for(int i=0;i<ch.length;i++)
+		{
+			for(int j=k;j<ch.length;j++)
+			{
+				if(isVowel(ch[i]))
+				{
+					total++;
+					
+				}
+				System.out.print(total);
+				
+			}
+			maxValue =total;
+			
+			
+		}
+			
+		
+	}
+	
+
+	private void VowelsmaxcountwithkelementSlidingwindow(String s, int k) {
+		// TODO Auto-generated method stub
+		
+		char[] ch = s.toCharArray();
+		int start=0;
+		int maxValue = Integer.MIN_VALUE;
+		int total=0;
+		int count =0;
+		
+		for(int i=0;i<k;k++)
+		{
+			if(isVowel(ch[i]))
+			{
+				count++;
+				
+			}
+			
+			System.out.print(false);
+		}
+
+	}
