@@ -26,7 +26,7 @@ public class ReversePrefixofWord {
 		String s= "abcdefd";
 		char ch = 'd';
 		
-		reversePrefix(s,ch);
+		reversePrefixindexof(s,ch);
 		
 	}
 
@@ -48,6 +48,23 @@ public class ReversePrefixofWord {
 				
 			}
 		}
+		while(start<end)
+		{
+			temp  = input[end]; 
+			input[end--]= input[start];
+			input[start++]= temp;
+		}
+		System.out.print(input);
+	}
+	
+	private void reversePrefixindexof(String s, char ch) {
+		// TODO Auto-generated method stub
+		
+		char[] input = s.toCharArray();
+		int end = s.indexOf(ch);
+		char temp ;
+		int start=0;
+
 		while(start<end)
 		{
 			temp  = input[end]; 
