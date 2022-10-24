@@ -41,8 +41,7 @@ public class Palindrome {
 			System.out.print("Given is Palindrome ");
 		}
 		else
-		{
-			
+		{			
 			System.out.print("Given is not  Palindrome ");
 		}
 			

@@ -25,10 +25,12 @@ public class RemoveElement {
 	
 	@Test // positive
 	public void example1() {
-		int[] nums = {5,3,2,1,2,3};
+		//int[] nums = {5,3,2,1,2,3};
+		int[] nums = {1,2,3,4,5,6};
 		int target =  3;
 		int[] out =  removeElement(nums, target);
-		Assert.assertTrue(Arrays.equals(out, new int[] {5,2,1,2}));
+		//Assert.assertTrue(Arrays.equals(out, new int[] {5,2,1,2}));
+		removeElementwithoutlist(nums,target);
 	}
 	
 	@Test // negative
@@ -68,4 +70,28 @@ public class RemoveElement {
 	    return output;
 	}
 
+	
+	public int[] removeElementwithoutlist(int[] nums, int target)
+	{
+		int [] output = new int[nums.length];
+		
+		
+		for(int i=0;i<nums.length-1;i++)
+		{
+			System.out.println (i +" is "+nums[i]);
+			
+			if(nums[i]!=target)
+			{
+				output[i]=nums[i];
+				
+			}
+			
+		}
+		
+		System.out.print(Arrays.toString(output));
+		
+		return output;
+		
+	}
+	
 }
