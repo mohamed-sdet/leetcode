@@ -29,7 +29,7 @@ public class ReverseOnlyLetters {
 
 	  }
 
-	private void reverseOnlyLetters(String s) {
+	private String reverseOnlyLetters(String s) {
 		// TODO Auto-generated method stub
 		
 		char [] ch = s.toCharArray();
@@ -53,10 +53,14 @@ public class ReverseOnlyLetters {
 			{
 				start++;
 			}
-			break;
+			
 		}
 		
 		System.out.print(ch);
+		String str = new String();  
+        String string = str.valueOf(ch);
+        
+        return string;
 		
 		
 	}
