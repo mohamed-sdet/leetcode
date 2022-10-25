@@ -29,8 +29,7 @@ public class MergeSortedArray {
 		// TODO Auto-generated method stub
 		
 		 int left=m-1, right=n-1;
-	        int i=nums1.length-1;
-	        for(;i>0;i--){
+	        for(int i=nums1.length-1;i>0;i--){
 	            if(left>=0 && right>=0) {
 	                if (nums1[left] > nums2[right]) {
 	                    nums1[i] = nums1[left--];
