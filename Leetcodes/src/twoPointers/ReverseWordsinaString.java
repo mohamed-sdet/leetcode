@@ -50,7 +50,7 @@ public class ReverseWordsinaString {
 		
 		}
 		
-		System.out.print(output);
+		System.out.print(output.trim());
 	}
 
 }
