@@ -43,8 +43,9 @@ public class LongPressedName {
 			{
 				result = true;
 				end++;
+				start++;
 				
-			}else start++;
+			}else end++;
 			
 		}
 		
