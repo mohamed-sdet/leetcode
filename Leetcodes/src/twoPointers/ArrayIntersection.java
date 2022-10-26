@@ -20,13 +20,17 @@ public class ArrayIntersection {
 	private void intersection(int[] nums1, int[] nums2) {
 		// TODO Auto-generated method stub
 			int right=0 , left = 0;
-			
+			int count=0;
+			int[] output = new int[nums1.length];
+			 
 			while(left<nums1.length && right<nums2.length)
 			{
 				if(nums1[left] == nums2[right])
 				{
 					System.out.println(nums1[left] );
 					System.out.println( "equal" );
+					output[count++] =nums1[left];
+					
 					left++;
 					right++;
 					continue;

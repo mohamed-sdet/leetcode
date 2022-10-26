@@ -38,39 +38,19 @@ public class FlippinganImage {
 			 int start= 0; 
 			 int end = imageSub.length-1;
 			 
-			 while(start<end)
+			 while(start<=end)
 			 {
 				 int temp = imageSub[end];
-				 imageSub[end--] = imageSub[start];
-				 imageSub[start++]=temp;
+				 imageSub[end--] = 	(imageSub[start] ==0)? 1:0;
+				 imageSub[start++] =(temp==0)? 1:0;
 					 
 			 }
-			 
-			 
 			 
 			 System.out.print(Arrays.toString(imageSub));
 			
 		}
 		
-		for(int j=0;j<image.length;j++)
-		{
-			int[] imageSub = image[j];
-			
-			for(int k=0;k<imageSub.length;k++)
-			{
-				if(imageSub[k]==0)
-				{
-					imageSub[k]=1;
-					
-				}else
-				{
-					imageSub[k]=0;
-					
-				}
-				
-			}
-			 System.out.print(Arrays.toString(imageSub));
-		}
+		
 		
 	}
 	
