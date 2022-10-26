@@ -28,7 +28,6 @@ public class MaximumSubarray {
         int start =0;
         int  maxSum = Integer.MIN_VALUE;
         int sum= 0;
-        int d =0;
         
         for(int i=0;i<k;i++)
         {
