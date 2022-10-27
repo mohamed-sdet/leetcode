@@ -32,7 +32,6 @@ public class MaximumSubarray {
         for(int i=0;i<k;i++)
         {
             sum += nums[i];
-            
         }
         
         maxSum= sum;
