@@ -4,11 +4,14 @@ import org.junit.Test;
 
 public class MaxConsecutiveOnesIII {
 
-	/*
-	 * Subarray Product Less Than K
-	 */
+	/*Psuedocode
+	 *Traverse the input array  towards right 
+	 * if right is equal to 0 reduce the k value
+	 * if k<0 then increment start and reset k value 
+	 * Get max value right -left
+	 */ 
 	
-	
+	//* one hour
 	
 	@Test
 	public void examplePositiveData()
@@ -26,21 +29,25 @@ public class MaxConsecutiveOnesIII {
 		
 		
 		int start=0;
-		int end=0;
+
 		
-		while(end<=nums.length)
+		
+		
+		for(int right=0;right<nums.length;right++)
 		{
-			if(nums[end]!=1)
+			if(right==0)
 			{
-				System.out.println(nums[start]+ nums[end]);
+				k--;
+				
+			}
+			if(k<0)
+			{
 				start++;
 				
-			}end++;
-			
-			break;
+			}
+
 		}
-		
-		
+	
 	}
 	
 	
