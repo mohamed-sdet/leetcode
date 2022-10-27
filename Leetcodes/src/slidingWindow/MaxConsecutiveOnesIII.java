@@ -26,28 +26,29 @@ public class MaxConsecutiveOnesIII {
 
 	private void longestOnes(int[] nums, int k) {
 		// TODO Auto-generated method stub
-		
-		
-		int start=0;
-
-		
-		
-		
-		for(int right=0;right<nums.length;right++)
+				
+		int left=0;
+		int right=0;
+	
+		int min =Integer.MIN_VALUE;
+		int max=0;
+		for(right=0;right<nums.length;right++)
 		{
-			if(right==0)
+			if(nums[right]==0)
 			{
 				k--;
 				
 			}
 			if(k<0)
 			{
-				start++;
-				
+				if(nums[left]==0)
+				{
+					k++;
+				}left++;	
 			}
-
+			
 		}
-	
+		System.out.println(right-left);
 	}
 	
 	
