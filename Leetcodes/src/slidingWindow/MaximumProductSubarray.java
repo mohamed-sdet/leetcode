@@ -13,7 +13,7 @@ public class MaximumProductSubarray {
 	 */
 	
 	
-	public examplePositiveData()
+	public void examplePositiveData()
 	{
 		int [] nums = {2,3,-2,4};
 		MaximumProductSubarray(nums);

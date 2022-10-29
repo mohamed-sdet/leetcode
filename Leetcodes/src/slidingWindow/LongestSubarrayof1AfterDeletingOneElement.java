@@ -64,11 +64,8 @@ public class LongestSubarrayof1AfterDeletingOneElement {
 
 			if(k<0)
 			{
-				if(nums[left]==0)
-				{
-					k++;
-					
-				}left++;
+				if(nums[left]==0) k++;
+				left++;
 			}
 			
 			if(k>=0 && k<=1)
