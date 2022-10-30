@@ -1,5 +1,9 @@
 package dutchFlagAlgorithm;
 
+import java.util.Arrays;
+
+import org.junit.Test;
+
 public class Descendingordersort {
 	
 	
@@ -11,7 +15,7 @@ public class Descendingordersort {
 	 */
 	
 	
-	
+	@Test
 	public void examplePositiveData()
 	{
 		int[] nums = {1,2,0,1,2};
@@ -25,7 +29,29 @@ public class Descendingordersort {
 	private void Descendingordersort(int[] nums) {
 		// TODO Auto-generated method stub
 		
+		int left=0,middle=0,right=nums.length-1,temp=0;
+		
+		while(middle<=right)
+		{
+			if(nums[middle]==1) middle++;
+			else if(nums[middle]==2)
+			{
+				temp = nums[middle];
+				nums[middle]=nums[left];
+				nums[left]=temp;
+				left++;
+			}else
+			{
+				temp=nums[right];
+				nums[right]=nums[middle];
+				nums[middle]= temp;
+				right--;
+			}	
+		}
+		System.out.print(Arrays.toString(nums));
+	}
+		
 	}
 	
 
-}
+

@@ -40,7 +40,7 @@ public class AscendingOrderSort {
 		while(middle<=right)
 		{
 			if(nums[middle]==1) middle++;
-			else if(nums[middle]==0)
+			else if(nums[middle]==2)
 			{
 				temp = nums[middle];
 				nums[middle]=nums[left];
