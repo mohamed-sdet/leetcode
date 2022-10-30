@@ -37,7 +37,7 @@ public class Descendingordersort {
 			else if(nums[middle]==2)
 			{
 				temp = nums[middle];
-				nums[middle]=nums[left];
+				nums[middle++]=nums[left];
 				nums[left]=temp;
 				left++;
 			}else
@@ -50,8 +50,7 @@ public class Descendingordersort {
 		}
 		System.out.print(Arrays.toString(nums));
 	}
-		
-	}
+}
 	
 
 

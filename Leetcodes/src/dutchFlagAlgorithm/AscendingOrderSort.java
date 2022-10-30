@@ -46,6 +46,7 @@ public class AscendingOrderSort {
 				nums[middle]=nums[left];
 				nums[left]=temp;
 				left++;
+				
 			}else
 			{
 				temp=nums[right];
