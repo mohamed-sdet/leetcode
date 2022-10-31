@@ -25,8 +25,8 @@ public class IsomorphicStrings {
 	@Test
 	public void examplePositiveData()
 	{
-		String s = "egge";
-		String t ="addl";
+		String s = "egg";
+		String t ="add";
 		
 	
 		Assert.assertEquals(IsomorphicStrings(s,t),true);

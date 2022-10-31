@@ -7,6 +7,8 @@ import org.junit.Test;
 public class MostCommonWord {
 	
 	
+	private static final String Hashset = null;
+
 	/*
 	 * Split input string by , and . then split by space
 	 * Store then spited string in char array 
@@ -38,14 +40,12 @@ public class MostCommonWord {
 		String [] wordDot =sentanceLower.split(" ");
 		
 		HashMap<String,Integer> sMap= new HashMap<>();
-		HashMap<String,Integer> tMap= new HashMap<>();
-		
-		tMap.put(banned, 1);
+		Hashset<String> banned= hash
 		
 		for(int i=0;i<wordDot.length;i++) 
 			{
 			 if(tMap.get(banned) != null)
-			sMap.put(wordDot[i], sMap.getOrDefault(wordDot[i], 0)+1);
+			 sMap.put(wordDot[i], sMap.getOrDefault(wordDot[i], 0)+1);
 			
 			}
 
