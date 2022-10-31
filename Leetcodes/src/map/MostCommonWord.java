@@ -1,14 +1,15 @@
 package map;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 import org.junit.Test;
 
 public class MostCommonWord {
 	
 	
-	private static final String Hashset = null;
-
 	/*
 	 * Split input string by , and . then split by space
 	 * Store then spited string in char array 
@@ -29,33 +30,30 @@ public class MostCommonWord {
 		
 	}
 
-	private void mostCommonWord(String paragraph, String banned) {
+	private String mostCommonWord(String paragraph, String banned) {
 		// TODO Auto-generated method stub
-		
-		
-		
-		String sentance = paragraph.replaceAll(",", "");
-		
-		String sentanceLower = sentance.toLowerCase();
-		String [] wordDot =sentanceLower.split(" ");
+		String output = "" ;
+		String [] wordDot =paragraph.toLowerCase().replaceAll("[!?',;.]", "").trim().split("\\s+");
 		
 		HashMap<String,Integer> sMap= new HashMap<>();
-		Hashset<String> banned= hash
 		
 		for(int i=0;i<wordDot.length;i++) 
 			{
-			 if(tMap.get(banned) != null)
-			 sMap.put(wordDot[i], sMap.getOrDefault(wordDot[i], 0)+1);
-			
+			if(!wordDot[i].equals(banned))sMap.put(wordDot[i], sMap.getOrDefault(wordDot[i], 0)+1);			
 			}
-
-		
-		
+		int max = Collections.max(sMap.values());
 		System.out.println(sMap);
-		System.out.println(tMap);
 		
-		
-		
+		for(Entry<String, Integer> entryset: sMap.entrySet())
+		{
+			if(entryset.getValue()==max)
+			{
+				output= entryset.getKey();
+
+			}
+		}
+		System.out.print(output);
+		return output;
 	}
 	
 }
