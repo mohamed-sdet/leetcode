@@ -30,20 +30,29 @@ public class MostCommonWord {
 	private void mostCommonWord(String paragraph, String banned) {
 		// TODO Auto-generated method stub
 		
+		
+		
 		String sentance = paragraph.replaceAll(",", "");
+		
 		String sentanceLower = sentance.toLowerCase();
 		String [] wordDot =sentanceLower.split(" ");
 		
 		HashMap<String,Integer> sMap= new HashMap<>();
+		HashMap<String,Integer> tMap= new HashMap<>();
 		
-		for(int i=0;i<wordDot.length;i++)
-		{
+		tMap.put(banned, 1);
+		
+		for(int i=0;i<wordDot.length;i++) 
+			{
+			 if(tMap.get(banned) != null)
 			sMap.put(wordDot[i], sMap.getOrDefault(wordDot[i], 0)+1);
 			
-			
-		}
+			}
+
+		
 		
 		System.out.println(sMap);
+		System.out.println(tMap);
 		
 		
 		
