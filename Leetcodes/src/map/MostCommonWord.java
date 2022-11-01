@@ -49,7 +49,6 @@ public class MostCommonWord {
 			if(entryset.getValue()==max)
 			{
 				output= entryset.getKey();
-
 			}
 		}
 		System.out.print(output);
