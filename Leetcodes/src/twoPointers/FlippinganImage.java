@@ -30,14 +30,14 @@ public class FlippinganImage {
 	private void FlippinganImage(int[][] image) {
 		// TODO Auto-generated method stub
 		
-		
+		o(n)
 		for(int i=0;i<image.length;i++)
-		{
+		{   
 			 int[] imageSub = image[i];
 			 
 			 int start= 0; 
 			 int end = imageSub.length-1;
-			 
+			 o(m)
 			 while(start<=end)
 			 {
 				 int temp = imageSub[end];

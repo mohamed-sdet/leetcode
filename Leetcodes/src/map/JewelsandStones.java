@@ -20,7 +20,7 @@ public class JewelsandStones {
 	public void exampleDataEdge()
 	{
 		
-		String jewels = "z", stones = "zZ";
+		String jewels = "z", stones = "ZZ";
 		jewelsandStones(jewels,stones);
 		
 	}
