@@ -24,7 +24,7 @@ public class SubstringsofSizeThreewithDistinctCharacters {
 		
 		String  s = "aababcabc";
 		int k=3;
-		substringsofSizeThreewithDistinctCharacters1(s,k);
+		substringofSizeThreewithDistinctCharactersslidingwindow(s,k);
 		
 	}
 
@@ -54,32 +54,73 @@ public class SubstringsofSizeThreewithDistinctCharacters {
 	}
 	
 	private void substringsofSizeThreewithDistinctCharacters1(String s,int k)
-	{
-		
-		HashSet<Character> sMap = new HashSet();
 
-		int output=0;
+	{
+		int start=0;
+		int count=0;
 		
-		for(int i=0;i<s.length();i++)
+		HashSet<Character> set = new HashSet<>();
+		
+		for(int i=0;i<k;i++)
 		{
-			for(int j=i;j<k+i;j++)
+			set.add(s.charAt(i));
+		
+			if(set.size()==k)
 			{
-			sMap.add(s.charAt(j));
+				count++;
 			}
 			
-			if(sMap.size()==k)
-			{
-				output++;
-				System.out.print(sMap);
+			for(int j=k-1;j<s.length();j++)
+			{ 
+				
+				
+				set.remove(s.charAt(start));
+				set.add(s.charAt(j));
+				
+
+				if(set.size()==k)
+				{
+					count++;
+				}
+				
+				start++;
 			}
-			
-			
-			sMap.clear();
 		}
+		
+		
+		System.out.print(count);
+		//System.out.print(set);
+		
+		
+		
 		
 	}
 	
+	private void substringofSizeThreewithDistinctCharactersslidingwindow(String s ,int k)
+	{ 
+		
+		int windowSize=k;
+		
+		int count=0;
+		int start =0;
+		
+		HashSet <Character> hashset = new HashSet();
+		
+		for(int end=0;end<s.length();end++)
+		{
 	
+			if(windowSize>=0 && !hashset.add(s.charAt(end))) 
+			{
+				windowSize--;
+					
+			}
+				
+			System.out.print(hashset);
+			
+		}
+		
+		
+	}
 	
 	
 	
