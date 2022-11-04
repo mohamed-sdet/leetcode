@@ -31,11 +31,11 @@ public class JewelsandStones {
 		int jLenth = jewels.length(), sLength = stones.length();
 		int output=0;
 		
-		HashMap<Character,Integer> smap= new HashMap();
-		HashMap<Character,Integer> tmap= new HashMap();
+		HashMap<Character,Integer> smap= new HashMap<Character, Integer>();
+		HashMap<Character,Integer> tmap= new HashMap<Character, Integer>();
 		
 		for(int i=0;i<jLenth;i++)
-		{
+		{     
 			smap.put(stones.charAt(i), smap.getOrDefault(stones.charAt(i), 0)+1);
 		}
 		for(int j=0;j<sLength;j++)

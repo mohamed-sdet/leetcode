@@ -103,21 +103,26 @@ public class SubstringsofSizeThreewithDistinctCharacters {
 		
 		int count=0;
 		int start =0;
+		int right =0;
 		
 		HashSet <Character> hashset = new HashSet();
 		
-		for(int end=0;end<s.length();end++)
+		while(right<s.length())
 		{
-	
-			if(windowSize>=0 && !hashset.add(s.charAt(end))) 
+			if(hashset.add(s.charAt(right++)))
 			{
-				windowSize--;
-					
+				if(hashset.size()==3)
+				{
+					count++;
+				}
+			}else
+			{
+				right=++start;
+				hashset.clear();
 			}
-				
-			System.out.print(hashset);
 			
 		}
+		System.out.print(count);
 		
 		
 	}
