@@ -15,7 +15,7 @@ public class FindAllNumbersDisappearedinanArray {
 	 * 
 	 * 
 	 */
-//	@Test
+	@Test
 	public void examplePositiveData()
 	{
 		
@@ -44,7 +44,6 @@ public class FindAllNumbersDisappearedinanArray {
 		for(int i=0;i<nums.length;i++)
 		{
 			set.add(nums[i]);
-
 			
 		}
 		System.out.print(set);
