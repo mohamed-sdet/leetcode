@@ -17,42 +17,35 @@ public class SubstringsofSizeThreewithDistinctCharacters {
 	
 	@Test
 	public void examplePositiveData()
-	{  String  s = "aababcabc";
+	{  String  s = "xyzzaz";
 		int k=3;
 		substringofSizeThreewithDistinctCharactersslidingwindow(s,k);}
 
 	private void substringofSizeThreewithDistinctCharactersslidingwindow(String s ,int k)
 	{ 
 		
-		int windowSize=k;
-		
 		int count=0;
-		int start =0;
 		int right =0;
-		int window=3;
 		
-		HashSet <Character> hashset = new HashSet();
-		HashSet <Character> hashset2 = new HashSet();
+		HashSet <Character> hashset = new HashSet<Character>();
 		while(right<s.length())
 		{
-			if(!hashset.add(s.charAt(right)))
-			{
-				if(hashset.size()==window)
-				{
-					System.out.print(hashset);
-				}
-	
-			}else
-			{
-				
-			}hashset.remove(++start);
+			hashset.add(s.charAt(right));
 			
+			if(right>=k)
+			{
+				char ch = s.charAt(right-k);
+				if(!hashset.contains(ch))
+				hashset.remove(ch);
+				
+			}if(hashset.size()==k)
+			{
+				count++;
+			}
 			right++;
 
 		}
 			
 		System.out.print(count);
-				
-	
 }
 }
