@@ -12,7 +12,7 @@ public class ReverseString {
 	{
 	 char[]	s = {'h','e','l','l','o'};
 	 
-	 ReverseString(s);
+	 ReverseStringTwoPointer(s);
 		
 	}
 
@@ -23,15 +23,27 @@ public class ReverseString {
 		
 			 for(int j=s.length-1;j>=0;j--)
 			 {
-				 char temp;
-				 temp=s[count];
-				 s[count++]= s[j];
-				 s[j]=temp;
-
+				// char temp;
+				 //temp=s[j];
+				// s[j]=s[count];
+				// s[count++]=temp;
+				 //s[count++]=s[j];
+				 System.out.println(s[j]);
 			 }
 			
-
+	}
+	
+	private void ReverseStringTwoPointer(char[] s)
+	{
 		
+		int start =0,end=s.length-1;
+		while(start<end)
+		{
+			char temp;
+			temp=s[end];
+			s[end--]=s[start];
+			s[start++]=temp;
+		}
 		System.out.print(s);
 	}
 }
