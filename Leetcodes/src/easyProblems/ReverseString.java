@@ -23,11 +23,7 @@ public class ReverseString {
 		
 			 for(int j=s.length-1;j>=0;j--)
 			 {
-				// char temp;
-				 //temp=s[j];
-				// s[j]=s[count];
-				// s[count++]=temp;
-				 //s[count++]=s[j];
+
 				 System.out.println(s[j]);
 			 }
 			
