@@ -13,7 +13,7 @@ public class PermutationinString {
 		
 		String s1= "ab";
 		
-		PermutationinString(s,s1);
+		PermutationinString(s2,s1);
 		
 	}
 
