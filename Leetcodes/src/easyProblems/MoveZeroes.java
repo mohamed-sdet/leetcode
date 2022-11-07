@@ -11,7 +11,7 @@ public class MoveZeroes {
 	{
 		int [] nums = {0,1,0,3,12};
 		
-		moveZeroes(nums);
+		moveZeroesTwoPinters(nums);
 	}
 
 	private void moveZeroes(int[] nums) {
@@ -32,6 +32,24 @@ public class MoveZeroes {
 			nums[count++]=0;
 		}
 		System.out.print(Arrays.toString(nums));
+	}
+	
+	private void moveZeroesTwoPinters(int[] nums)
+	{
+		int left =0,right=0;
+		
+		while(right<nums.length)
+		{
+			if( nums[right]!=0)
+			{
+				int temp;
+				temp=nums[right];
+				nums[right]=nums[left];
+				nums[left++]=temp;
+			}right++;
+		}
+		System.out.print(Arrays.toString(nums));
+		
 	}
 
 
