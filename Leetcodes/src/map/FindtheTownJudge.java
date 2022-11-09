@@ -1,5 +1,7 @@
 package map;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
 import java.util.HashMap;
 
 import org.junit.Test;
@@ -40,6 +42,8 @@ public class FindtheTownJudge {
         
         for(int j=1;j<=n;j++)
         {
+        	
+        	int temp = map.getOrDefault(j,0);
         	if(map.getOrDefault(j,0)== n-1)
         	{
         		System.out.print(j);

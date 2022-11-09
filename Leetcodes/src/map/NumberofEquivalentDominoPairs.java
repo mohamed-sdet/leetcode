@@ -80,7 +80,7 @@ public class NumberofEquivalentDominoPairs {
 	{
 		HashMap<Integer,Integer> map = new HashMap<>();
 		int output=0;
-		
+		//o(n)
 		for(int i=0;i<dominoes.length;i++)
 		{
 			int[] dominoes1 = dominoes[i];
@@ -90,7 +90,7 @@ public class NumberofEquivalentDominoPairs {
 				map.put(dominoes2, map.getOrDefault(dominoes2, 0)+1);
 
 		}
-		
+	   //o(n)
 		for(int i:map.values())
 		{
 			
@@ -106,7 +106,7 @@ public class NumberofEquivalentDominoPairs {
 		
 	}
 	
-	//
+	//o(n)+o(n)= o(2n)
 	
 
 }
