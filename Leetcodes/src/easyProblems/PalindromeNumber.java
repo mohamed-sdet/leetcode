@@ -19,7 +19,14 @@ public class PalindromeNumber {
 
 	private void palindromeNumber(int s) {
 		// TODO Auto-generated method stub
-		if(x=reverse)
+		int num=0;
+		int temp;
+		while(num>0)
+		{
+			num= s%10;
+			
+			
+		}
 	}
 
 }

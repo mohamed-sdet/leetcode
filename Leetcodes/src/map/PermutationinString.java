@@ -2,6 +2,7 @@ package map;
 
 import java.util.HashMap;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class PermutationinString {
@@ -13,7 +14,7 @@ public class PermutationinString {
 		
 		String s1= "ab";
 		
-		PermutationinString(s2,s1);
+		Assert.assertEquals(s2,s1,false);
 		
 	}
 
