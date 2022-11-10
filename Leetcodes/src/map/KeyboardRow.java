@@ -31,21 +31,12 @@ public class KeyboardRow {
 		    HashSet<Character> s1 = new HashSet<>(Arrays.asList('q','w','e','r','t','y','u','i','o','p'));
 	        HashSet<Character> s2 = new HashSet<>(Arrays.asList('a','s','d','f','g','h','j','k','l'));
 	        HashSet<Character> s3 = new HashSet<>(Arrays.asList('z','x','c','v','b','n','m'));
-	        
-	        String c1 = "qwertyuiop";
-	        
-	        
-	        for(int k=0;k<c1.length();k++)
-	        {
-	        	s1.add(c1.charAt(k));
-	        }
-	        
-	        
+
 	        ArrayList<String> outputList = new ArrayList<>();
 	        
-	        boolean flag1 = false;
-	        boolean flag2 = false;
-	        boolean flag3 = false;
+	        int flag1 = 0;
+	        int flag2 = 0;
+	        int flag3 = 0;
 	     
 	        for(int i=0;i<words.length;i++)
 	        {
@@ -57,40 +48,50 @@ public class KeyboardRow {
 	                if(s1.contains(word0)&& s1.contains(word))
 	                {
 	                	
-	                	flag1 = true; 
-	                } else flag1=false;
+	                	flag1++; 
+	                } 
 	                if( s2.contains(word0) && s2.contains(word))
 	                {
 	                	
-	                	flag2 = true; 
-	                }else flag2=false;
+	                	flag2++; 
+	                }
 	                if( s3.contains(word0) && s3.contains(word))
 	                {
 	                	
-	                	flag3 = true; 
-	                }else flag3=false;
+	                	flag3++; 
+	                }
    
 	            }
-	            if(flag1 ==true)
+	            if(flag1 ==words[i].length())
                 {
 	            	outputList.add(words[i]);
 
-	            	flag1 = false;
+	            	flag1 = 0;
 	            	
-                }else if(flag2== true)
+                }else flag1 = 0;
+                	
+                if(flag2== words[i].length())
                 {
                 	outputList.add(words[i]);
 
-	            	flag2 = false;
-                }else if(flag3== true)
+	            	flag2 = 0;
+                }else flag2 = 0;
+                if(flag3==words[i].length())
                 {
                 	outputList.add(words[i]);
    
-	            	flag3 = false;
-                }
+	            	flag3 = 0;
+                } else flag3 = 0;
 	        }
 	        
-	        System.out.print(outputList);
+	        String [] result = new String[outputList.size()];
+	        
+	        for(int i=0;i<result.length;i++)
+	        {
+	        	result[i] = outputList.get(i);
+	        }
+
+	        System.out.print(Arrays.toString(result));
 	}
 	
 	
