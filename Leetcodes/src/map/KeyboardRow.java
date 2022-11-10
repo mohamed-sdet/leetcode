@@ -28,9 +28,18 @@ public class KeyboardRow {
 
 	private void keyboardRow(String[] words) {
 		// TODO Auto-generated method stub
-		    HashSet<String> s1 = new HashSet<>(Arrays.asList("q,w,e,r,t,y,u,i,o,p"));
-	        HashSet<String> s2 = new HashSet<>(Arrays.asList("a,s,d,f,g,h,j,k,l"));
-	        HashSet<String> s3 = new HashSet<>(Arrays.asList("z","x","c","v", "b","n","m"));
+		    HashSet<Character> s1 = new HashSet<>(Arrays.asList('q','w','e','r','t','y','u','i','o','p'));
+	        HashSet<Character> s2 = new HashSet<>(Arrays.asList('a','s','d','f','g','h','j','k','l'));
+	        HashSet<Character> s3 = new HashSet<>(Arrays.asList('z','x','c','v','b','n','m'));
+	        
+	        String c1 = "qwertyuiop";
+	        
+	        
+	        for(int k=0;k<c1.length();k++)
+	        {
+	        	s1.add(c1.charAt(k));
+	        }
+	        
 	        
 	        ArrayList<String> outputList = new ArrayList<>();
 	        
@@ -43,19 +52,19 @@ public class KeyboardRow {
 	        	
 	            for(int j=0;j<words[i].length();j++)
 	            {
-
+	            	char word0 = words[i].toLowerCase().charAt(0);
 	            	char word= words[i].toLowerCase().charAt(j);
-	                if(s1.contains(word))
+	                if(s1.contains(word0)&& s1.contains(word))
 	                {
 	                	
 	                	flag1 = true; 
 	                } else flag1=false;
-	                if( s2.contains(word))
+	                if( s2.contains(word0) && s2.contains(word))
 	                {
 	                	
 	                	flag2 = true; 
 	                }else flag2=false;
-	                if( s3.contains(word))
+	                if( s3.contains(word0) && s3.contains(word))
 	                {
 	                	
 	                	flag3 = true; 
@@ -65,18 +74,18 @@ public class KeyboardRow {
 	            if(flag1 ==true)
                 {
 	            	outputList.add(words[i]);
-	            	System.out.print(words[i]);
+
 	            	flag1 = false;
 	            	
                 }else if(flag2== true)
                 {
                 	outputList.add(words[i]);
-                	System.out.print(words[i]);
+
 	            	flag2 = false;
                 }else if(flag3== true)
                 {
                 	outputList.add(words[i]);
-                	System.out.print(words[i]);
+   
 	            	flag3 = false;
                 }
 	        }
