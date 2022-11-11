@@ -10,7 +10,7 @@ public class MaximumNumberofWordsYouCanType {
 	public void examplePositiveData()
 	{
 		
-		String text = "hello world t a", brokenLetters = "ad";
+		String text = "hello world", brokenLetters = "ad";
 		
 		maximumNumberofWordsYouCanType(text,brokenLetters);
 		
