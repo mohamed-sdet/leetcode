@@ -7,6 +7,17 @@ import org.junit.Test;
 
 public class BuddyStrings {
 
+	
+	
+	/*
+	 * Iterate the given goal value then add it to set 
+	 * Iterate the given s value then add it to the set in reverser order 
+	 * now try to compare both the set 
+	 * if both the map value matches return the out put as true 
+	 * 
+	 */
+	
+	
 	@Test
 	public void exampleData()
 	{
