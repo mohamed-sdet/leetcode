@@ -6,6 +6,24 @@ import org.junit.Test;
 
 public class MaximumNumberofWordsYouCanType {
 
+	
+	
+	/*   https://leetcode.com/problems/maximum-number-of-words-you-can-type/
+	 * Create an hashSet 
+	 * add the broken words on hashset 
+	 * Now try to initialize for loop 
+	 * Read the given text by spiting by words 
+	 * Now Iterate the words and check each char are not matching broken words in set 
+	 * a) If not matching increase the counter values 
+	 * b) Now check the word length and counter length 
+	 * 		i) if its same add output values by 1
+	 * 		ii) then reset the counter value as 0 
+	 * c) reset the counter value even if it nat matches the length 
+	 * Return the output 
+	 * 
+	 */		
+	
+	
 	@Test
 	public void examplePositiveData()
 	{

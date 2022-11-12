@@ -8,6 +8,16 @@ public class RomantoInteger {
 
 	
 	
+			/*Add given Symbol and values in map 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 */
+	
+	
 	@Test
 	public void examplePositiveData()
 	{
@@ -21,6 +31,7 @@ public class RomantoInteger {
 		// TODO Auto-generated method stub
 		
 		 int output = 0;
+		 int len= s.length()-1;
 	        
 	        HashMap<Character,Integer> roman = new HashMap<>();
 	        
@@ -31,10 +42,17 @@ public class RomantoInteger {
 	        {
 	            roman.put(symbol[i],value[i]);
 	        }
+
 	        
-	        for(int j=0;j<s.length();j++)
+	        for(int j=len-1;j>=0;j--)
 	        {
-	            output += roman.get(s.charAt(j));
+	            if((s.charAt(j))=='I'&& j<len-1 && (s.charAt(j+1)=='X' ||s.charAt(len+1)=='V'))
+	            	{
+	            	  output -= 1;
+	            	}
+	            else if(s.charAt(len)=='X' && len<s.length()-1 && (s.charAt(len+1)=='L'||s.charAt(len+1)=='C')) output-=10;
+	            else if(s.charAt(len)=='C' && len<s.length()-1 && (s.charAt(len+1)=='D'||s.charAt(len+1)=='M'))output-=100;
+	            else output+=roman.get(s.charAt(len));
 	        }
 	        
 	        System.out.print(output);
