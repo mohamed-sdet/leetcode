@@ -10,6 +10,18 @@ public class SumofUniqueElements {
 	//https://leetcode.com/problems/sum-of-unique-elements/
 	
 	
+	/*Iterate the given values in Set 
+	 * While Iterating add the duplicate values in another set 
+	 * Now check the given int in set 1 then add the set values 
+	 * Return the sum 
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+	
+	
 	@Test
 	public void examplepositiveData()
 	{

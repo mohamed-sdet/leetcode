@@ -8,13 +8,13 @@ public class RomantoInteger {
 
 	
 	
-			/*Add given Symbol and values in map 
-			 * 
-			 * 
-			 * 
-			 * 
-			 * 
-			 * 
+			/*https://leetcode.com/problems/roman-to-integer/
+			 * Add given Symbol and values in map 
+			 * use condition Iterate through by for loop in reverse 
+			*  Check if character is 'V' and prev character is I, then reduce the value by 1
+			 * Check if character is 'L' or 'C' and prev character is X, then reduce the value by 10
+			 * Check if character is 'D' or 'M' and prev character is C, then reduce the value by 100 below in if else 
+			 * return output 
 			 */
 	
 	
@@ -46,7 +46,7 @@ public class RomantoInteger {
 	        
 	        for(int j=len-1;j>=0;j--)
 	        {
-	            if((s.charAt(j))=='I'&& j<len-1 && (s.charAt(j+1)=='X' ||s.charAt(len+1)=='V'))
+	            if((s.charAt(j))=='I'&& j<len-1 && (s.charAt(j+1)=='X' || s.charAt(len+1)=='V'))
 	            	{
 	            	  output -= 1;
 	            	}
