@@ -26,6 +26,15 @@ public class RomantoInteger {
 		
 		romantoInteger(s);
 	}
+	
+	@Test
+	public void exampleEdgeData()
+	{
+		
+		String s = "IV";
+		
+		romantoInteger(s);
+	}
 
 	private void romantoInteger(String s) {
 		// TODO Auto-generated method stub
@@ -56,6 +65,7 @@ public class RomantoInteger {
 	        }
 	        
 	        System.out.print(output);
+	        
 		
 	}
 	
