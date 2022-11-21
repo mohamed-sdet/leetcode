@@ -101,16 +101,15 @@ public class SingleImplementation {
 	int indexOf(int value)
 	{
 		Node temp = head;
-		int pos = 0;
-		while(temp.next != null) {
+		int pos = -1;
+		while(temp != null) {
 			pos++;
 			
 			if(temp.value == value)
 				return pos;
 				
+			temp=temp.next;
 		}
-
-		
 		
 		return -1;
 	}
@@ -126,7 +125,33 @@ public class SingleImplementation {
 		return pos;
 	}
 	
+	void addAll(int [] value)
+	{
+		for(int i=0;i<value.length;i++)
+		{
+			add(value[i]);
+		}
+	}
 	
+	void removeAll(int value)
+	{
+		Node temp= head;
+		int pos =0;
+		while(temp != null)
+		{
+			if(temp.value == value)
+			{
+				remove(pos);
+				pos--;
+
+			}pos++;
+			
+			temp=temp.next;
+			
+			
+		}
+		
+	}
 	
 	
 	

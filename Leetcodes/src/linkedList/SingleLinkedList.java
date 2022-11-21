@@ -9,6 +9,7 @@ public class SingleLinkedList {
 		sl1.add(2);
 		sl1.add(3);
 		sl1.add(3);
+		sl1.add(5);
 		//sl1.removeFirst();
 		//System.out.println(sl1.size());
 		//sl1.set(0, 55);
@@ -28,10 +29,15 @@ public class SingleLinkedList {
 	//	System.out.println(sl1.get(3));
 	//	System.out.println(sl1.get(4));
 	//	System.out.println(sl1.get(5));
-		System.out.println(sl1.indexOf(3));
-		System.out.println(sl1.lastIndexOf());
+		//System.out.println(sl1.indexOf(3));
+	//	System.out.println(sl1.lastIndexOf());
+		System.out.println(sl1.length);
+		sl1.removeAll(3);
+		System.out.println(sl1.length);
+		
 		
 		
 	}
+
 
 }
