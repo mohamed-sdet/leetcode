@@ -34,6 +34,8 @@ public class MoveZeroes {
 		System.out.print(Arrays.toString(nums));
 	}
 	
+	
+	
 	private void moveZeroesTwoPinters(int[] nums)
 	{
 		int left =0,right=0;
@@ -52,5 +54,8 @@ public class MoveZeroes {
 		
 	}
 
+	
+	
+	
 
 }
