@@ -6,15 +6,11 @@ public class ExpandfromCenter {
 	public void example()
 	{
 		
-		String s = {};
+		//String s = {};
 		
 	}
 	
-	validPalindrome()
-	{
-		
-		
-	}
+	
 	
 
 }
