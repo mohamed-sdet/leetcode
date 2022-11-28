@@ -47,6 +47,12 @@ public class DistintAndUnque {
 		
 	}
 	
+	private void findDistintCharacterOtimized(String input) 
+	{
+		
+	
+	}
+	
 	
 	
 
