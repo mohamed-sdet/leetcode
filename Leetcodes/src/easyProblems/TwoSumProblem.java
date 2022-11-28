@@ -34,8 +34,8 @@ public class TwoSumProblem {
 	@Test
 	public void exampleNegativeTestData()
 	{
-		int[] nums = {2,6,1,1,7};
-		int target = 10;
+		int[] nums = {2,1,1,9};
+		int target = 12;
 		twosumProblem(nums,target);
 		
 	}
@@ -49,7 +49,8 @@ public class TwoSumProblem {
 			
 			for(int j=i+1;j<nums.length;j++)
 			{
-				if(nums[i]+nums[j]== target)
+				int temp = nums[i]+nums[j];
+				if(temp== target)
 				{
 					System.out.println(i + " "+ j);
 					bMatch =true;
@@ -58,15 +59,43 @@ public class TwoSumProblem {
 			
 			}
 
-			if(bMatch==false)
-			{
-				throw new RuntimeException("No Match ");
-				
-			}
+		}
+		if(bMatch==false)
+		{
+			throw new RuntimeException("No Match ");
 			
 		}
+		
 	}
 	
+	private void twoSumOtimized(int[] nums, int target) {
+		
+		
+		int start = 0 , end= nums.length;
+		
+		while(start<end)
+		{
+			int sum = nums[start]+nums[end];
+			if( sum == target)
+			{
+				System.out.println(start + " "+ end);
+				start++;
+				end--;
+				
+				
+			}else if(sum>target)
+			{
+				
+				end--;
+			}else 
+			{
+				
+				start++;
+			}
+		}
+		
+		
+	}
 	
 	
 	
