@@ -17,10 +17,10 @@ public class RemovetheElement {
 	public void PositiveData() 
 	{
 		
-		int [] nums = {3,2,2,3};
+		int [] nums = {3,2,2,3,2};
 		int target = 3;
 		
-		removeElemet(nums,target);
+		removeElementOptimized(nums,target);
 		
 	}
 
@@ -40,6 +40,28 @@ public class RemovetheElement {
 			
 		}
 		System.out.print(Arrays.toString(temp));
+	}
+	
+	
+	public void removeElementOptimized(int[] nums, int target)
+	{
+		int start=0,end=0;
+		
+		while(end<nums.length)
+		{
+			if(nums[end] !=target)
+			{
+			 int temp = nums[end];
+			 nums[end++]=nums[start];
+			 nums[start++]=temp;
+			}
+			end++;
+			
+		}
+		
+		System.out.println(Arrays.toString(nums));
+		
+		System.out.println(Arrays.toString(Arrays.copyOf(nums,start+1)));
 	}
 
 }
