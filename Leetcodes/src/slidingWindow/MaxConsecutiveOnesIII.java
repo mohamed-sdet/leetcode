@@ -24,6 +24,18 @@ public class MaxConsecutiveOnesIII {
 		
 	}
 
+	
+	@Test
+	public void examplePositiveData2()
+	{
+		
+		int[] nums = {1,1,1,1,0,0,0,1,0} ;
+		int k = 2;
+		
+		longestOnes(nums,k);
+		
+	}
+
 	private void longestOnes(int[] nums, int k) {
 		// TODO Auto-generated method stub
 				
