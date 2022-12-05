@@ -23,7 +23,7 @@ public class CircularPrinter {
 		
 	}
 	@Test
-	public void exampleEdgeData()
+	public void exampleEdgeData1()
 	{
 		String s = "ZNMD";
 		
