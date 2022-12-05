@@ -28,7 +28,7 @@ public class DuplicateProduct {
 		
 		Integer[] prices = {2,2,2,2,2};
 		List<Integer> price = Arrays.asList(prices);
-		List<Integer> weigth = new ArrayList(Arrays.asList(new Integer[] {2,5,1,1,1}));
+		List<Integer> weigth = new ArrayList(Arrays.asList(new Integer[] {5,1,1,1}));
 		
 		duplicateProduct(name,price,weigth);
 		
@@ -37,11 +37,15 @@ public class DuplicateProduct {
 	private void duplicateProduct(List<String> name, List<Integer> price, List<Integer> weigth) {
 		// TODO Auto-generated method stub
 		
+		int size = name.size();
+		if(weigth.size() != size && price.size() != size) System.out.print("size -1");
+		
 		int output =0;
 		HashSet<String> set = new HashSet<>();
 		
 		for(int i=0;i<name.size();i++)
 		{
+			System.out.println(i);
 			if(!set.add(name.get(i)+"-"+price.get(i)+"-"+weigth.get(i)))
 			{
 				
