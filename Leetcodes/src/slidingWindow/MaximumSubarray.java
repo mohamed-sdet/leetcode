@@ -16,8 +16,8 @@ public class MaximumSubarray {
 	{
 		int [] nums = {1,5,2,3,7,1};
 		int k=3;
-		
-		maximumSubarray(nums,k);
+		maxsubArrayOfGivenLength(nums,k);
+		//maximumSubarray(nums,k);
 		
 	}
 
@@ -45,4 +45,27 @@ public class MaximumSubarray {
         System.out.print(maxSum);
 	}
 	
+	
+	private void maxsubArrayOfGivenLength (int[] nums,int k)
+	{
+		int sum=0;
+		int maxSum=0;
+	
+		for(int i=0;i<k;i++)
+		{
+			sum = sum +nums[i];
+		}
+		maxSum=sum;
+		for(int i=k;i<nums.length;i++)
+		{  int start= i-k;
+		//System.out.println(start);
+		//System.out.println(i);
+			sum= sum + nums[i];
+			sum = sum-nums[start];
+			maxSum = Math.max(sum, maxSum);
+			
+		}
+		System.out.print(maxSum);
+		
+	}
 }

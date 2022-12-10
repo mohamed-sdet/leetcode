@@ -13,6 +13,9 @@ import org.junit.Test;
 public class FrequencySort {
 	
 	
+	private static final int ArrayList = 0;
+
+
 	/*Initialize HashMap and put map by Iterating the Value and occurrence 
 	 *Get the values of the occurrence and sort using collection sort 
 	 *Iterate the map values using the list sorted values 
@@ -25,7 +28,8 @@ public class FrequencySort {
 	{
 		int[] item = {4,5,6,5,4,3};
 		
-		frequencySort(item);
+		//frequencySort(item);
+		frequencySortoptimize(item);
 		
 	}
 
@@ -75,6 +79,49 @@ public class FrequencySort {
 	}
 	
 
-	
+	private void frequencySortoptimize(int [] item)
+	{
+		HashMap <Integer,Integer> map = new HashMap<>();
+		
+		for(int i=0;i<item.length;i++)
+		{
+			map.put(item[i], map.getOrDefault(item[i],0)+1);
+		}
+		
+		List<Integer> list =new ArrayList();
+		
+		for(int i : map.values())
+		{
+			list.add(i);
+		}
+		Collections.sort(list);
+		
+		int[] output= new int [item.length];
+		int count=0;
+		for(int i=0;i<list.size();i++)
+		{
+			for(Entry<Integer,Integer> ent: map.entrySet())
+			{
+				
+				if(list.get(i)==ent.getValue())
+				{
+					int fre = ent.getValue();
+					while(fre>0)
+					{
+						output[count++]= ent.getKey();
+						
+						fre--;
+						
+					}
+					map.put(ent.getKey(), 0);
+					
+				}
+				
+			}
+			
+			
+		}
+		System.out.print(Arrays.toString(output));
+	}
 	
 }
