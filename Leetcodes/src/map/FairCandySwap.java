@@ -51,6 +51,8 @@ public class FairCandySwap {
 	        {
 	          if(set.contains(aliceSizes[i]+diff))
 	          {
+	        	  
+	        	  System.out.print(aliceSizes[i]+" "+aliceSizes[i]+diff);
 	              
 	              return new int[]{(aliceSizes[i]),(aliceSizes[i]+diff)};
 	              
