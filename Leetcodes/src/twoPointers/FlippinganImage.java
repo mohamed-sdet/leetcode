@@ -78,11 +78,11 @@ public class FlippinganImage {
 
        int left=0;
        int right = temp.length-1;
-        while(left<right)
+        while(left<=right)
         {
            int temp1 = temp[left];
-           temp[left++]= temp[right];
-           temp[right--] = temp1;   
+           temp[left++]= (temp[right]==0) ?1:0 ;
+           temp[right--] = (temp1==1)?0:1;   
         }
         return temp;
     } 
