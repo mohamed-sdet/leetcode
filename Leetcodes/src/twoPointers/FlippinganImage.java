@@ -23,7 +23,9 @@ public class FlippinganImage {
 		int [] [] image = {{1,1,0},{1,0,1},{0,0,0}};
 		
 
-		FlippinganImage(image);
+		//FlippinganImage(image);
+		
+		flipingImage(image);
 		
 	}
 
@@ -54,5 +56,35 @@ public class FlippinganImage {
 		
 	}
 	
+
+	public void flipingImage(int[][] image)
+	{
+		
+		int [][] out = new int[image.length][];
+
+	     for(int i=0;i<image.length;i++)
+	     {
+	         int[] temp = image[i];
+	         swap(temp);
+	         System.out.print(Arrays.toString(temp));   
+	     }
+	     
+	     System.out.print(Arrays.toString(image));
+	     
+	    
+	}
+	public int[] swap(int [] temp)
+    {
+
+       int left=0;
+       int right = temp.length-1;
+        while(left<right)
+        {
+           int temp1 = temp[left];
+           temp[left++]= temp[right];
+           temp[right--] = temp1;   
+        }
+        return temp;
+    } 
 
 }

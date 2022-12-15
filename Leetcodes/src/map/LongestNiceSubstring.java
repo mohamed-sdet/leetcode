@@ -26,6 +26,8 @@ public class LongestNiceSubstring {
 		String s = "YazaAay";
 		
 		longestNiceSubstring(s);
+		
+		
 
 	}
 
