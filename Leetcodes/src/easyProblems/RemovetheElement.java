@@ -20,7 +20,7 @@ public class RemovetheElement {
 		int [] nums = {3,2,2,3,2};
 		int target = 3;
 		
-		removeElementOptimized(nums,target);
+		removeElemet(nums,target);
 		
 	}
 
@@ -52,7 +52,7 @@ public class RemovetheElement {
 			if(nums[end] !=target)
 			{
 			 int temp = nums[end];
-			 nums[end++]=nums[start];
+			 nums[end]=nums[start];
 			 nums[start++]=temp;
 			}
 			end++;

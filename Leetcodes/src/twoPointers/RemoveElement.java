@@ -33,6 +33,16 @@ Do not allocate extra space for another array. You must do this by modifying the
 			removeElement(nums,val);
 		
 		}
+		@Test
+		public void examplePositive2()
+		{
+			int [] nums = {0,1,2,2,3,0,4,2};
+			int val = 2;
+			
+			
+			removeElement(nums,val);
+		
+		}
 
 	private void removeElement(int[] nums, int val) {
 		// TODO Auto-generated method stub
