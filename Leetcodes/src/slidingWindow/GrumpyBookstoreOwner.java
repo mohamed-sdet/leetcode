@@ -23,7 +23,7 @@ public class GrumpyBookstoreOwner {
 		int grumpy[]  = {0,1,0,1,0,1,0,1};
 		
 		int minutes = 3;
-		grumpyBookstoreOwner(customer,grumpy,minutes);
+		grumpyBookstoreOwner(customers,grumpy,minutes);
 		
 		
 		

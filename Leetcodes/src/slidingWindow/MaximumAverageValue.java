@@ -23,7 +23,7 @@ public class MaximumAverageValue {
 		 
 		 for(int i=0;i<nums.length;i++)
 		 {
-			 sum = nums[i] +  
+			 sum = nums[i] ; 
 		 }
 		 
 		 

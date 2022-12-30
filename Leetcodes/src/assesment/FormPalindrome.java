@@ -1,5 +1,7 @@
 package assesment;
 
+import java.util.Arrays;
+
 public class FormPalindrome {
 
 	public void examplePositiveData()

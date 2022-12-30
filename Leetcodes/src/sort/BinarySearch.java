@@ -17,7 +17,7 @@ public class BinarySearch {
 		{
 			int mid = (right+left)/2;
 			
-			if()
+	
 		}
 	}
 
