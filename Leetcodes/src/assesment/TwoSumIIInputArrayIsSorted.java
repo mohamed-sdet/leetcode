@@ -27,7 +27,7 @@ public class TwoSumIIInputArrayIsSorted {
 		int[] numbers = {2,7,11,15};
 		int target =9; 
 		//twoSumIIInputArrayIsSortedBruteForce(numbers,target);
-		twoSumIIInputArrayIsSortedBruteForcetwopointer(numbers,target);
+		twoSumIIInputArrayIsSortedBruteForce(numbers,target);
 	}
 	
 	public void exampleEdgeData()

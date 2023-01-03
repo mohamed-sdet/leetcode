@@ -16,16 +16,16 @@ public class Fibbinocci {
 	private void fibbinocci(int n) {
 		// TODO Auto-generated method stub
 		
-		int sum=0,firstNum=1,secNum=0;
-		
+		int first =0,secNum=1,temp=0;
 		for(int i=0;i<n;i++)
 		{
-			sum = firstNum+secNum;
-			firstNum= secNum;
-			secNum=sum;
-			System.out.println(sum);
+			temp = first + secNum;
+			first  = secNum;
+			secNum=temp;
+			
+			System.out.println(temp);
+			
 		}
-		
 	}
 
 }
