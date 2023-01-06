@@ -72,7 +72,6 @@ public class SumofUniqueElements {
         	if(set.contains(nums[j]))
         	{
         		sum  += nums[j];
-        		
         	}
         }
         
