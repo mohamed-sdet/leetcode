@@ -71,10 +71,11 @@ public class GroupAnagram {
 				//e-1,a-1,t-1 ,eat
 			}
 			
-			return new ArrayList<>(map.values());
+			
 			
 			
 		}
+		return new ArrayList<>(map.values());
 		
 	}
 	
