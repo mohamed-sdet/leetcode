@@ -15,7 +15,7 @@ public class FormPalindrome {
 
 	private void examplePositiveData(String s) {
 		// TODO Auto-generated method stub
-		
+	/*	
 		int count[] = new int[s.length()];
         Arrays.fill(count, 0);
 
@@ -30,8 +30,9 @@ public class FormPalindrome {
             if (odd > 1)
                 return false;
         }
- 
+
     }
+     */
 		
 	}
 	
