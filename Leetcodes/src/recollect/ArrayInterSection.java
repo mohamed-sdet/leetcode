@@ -14,9 +14,39 @@ public class ArrayInterSection {
 		int [] b= {5,6,7,8,9};
 		
 		
-		 arrayIntersection(a,b);
+		arrayMerge(a,b);
 		 
 		 
+	}
+	
+	public void arrayMerge(int[] a, int[] b)
+	{
+		int left =0;
+		int right =0;
+		int [] temp = new int[a.length+b.length];
+		int counter =0;
+		
+		while(left < a.length || right < b.length)
+		{
+			if(left==a.length)
+			{
+				temp[counter++] = b[right++];
+			}else if(right==b.length)
+			{
+				temp[counter++] = a[left++];
+			}else if(a[left] <= b[right])
+			{
+				temp[counter++] = a[left];
+				left++;
+			}else 
+			{
+				temp[counter++] = b[right];
+				right++;
+			}
+	
+		}
+		System.out.print(Arrays.toString(temp));
+				
 	}
 
 	private void arrayIntersection(int[] a, int[] b) {
@@ -51,6 +81,29 @@ public class ArrayInterSection {
 		}
 		
 		System.out.println(Arrays.toString(output));
-		throw new RuntimeException("mohamed");
+		
+	}
+
+
+	public void ArrayIntersection(int[] a, int[] b)
+	{
+		int left=0;
+		int right=0;
+		
+		while(left<a.length && right<b.length)
+		{
+			if(a[left]==b[right])
+			{
+				System.out.print(left +" "+ right);
+			}else if(a[left]<b[right])
+			{
+				left++;
+			}else 
+			{
+				right++;
+			}
+		}
+
+		
 	}
 }

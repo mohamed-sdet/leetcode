@@ -11,6 +11,7 @@ public class ReverseString {
 		String s = "Mohamed";
 		
 		reverseString(s);
+		reverseStringTwopointer(s);
 	}
 
 	private void reverseString(String s) {
@@ -23,10 +24,26 @@ public class ReverseString {
 			
 		}
 		
-		System.out.print(b);
+		System.out.println(b);
 	}
 
 
-   
+   private void reverseStringTwopointer(String s)
+   {
+	   char[] ch = s.toCharArray();
+	   
+	   int left =0;
+	   int right =s.length()-1;
+	   
+	   while (left<right)
+	   {
+		   char temp = ch[right];
+		   ch[right--] = ch[left];
+		   ch[left++] = temp;
+	   }
+	   
+	   System.out.println(String.valueOf(ch));
+	   
+   }
 
 }

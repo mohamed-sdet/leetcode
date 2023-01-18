@@ -17,7 +17,9 @@ public class RemoveElement {
 		int [] nums = {1,2,3,5,6,8,9,2};
 		int target = 2;
 		
-		removetarget(nums,target);
+		//removetarget(nums,target);
+		
+		removeElementUsingTwoPointer(nums,target);
 		
 		
 	}
@@ -57,5 +59,24 @@ public class RemoveElement {
 		System.out.print(Arrays.toString(output));
 		
 		return output;
+	}
+	
+	public void removeElementUsingTwoPointer(int[] nums, int target)
+	{
+		int left =0;
+		int right =0;
+		
+		while(right<nums.length)
+		{
+			if(nums[right] !=target)
+			{
+				int temp = nums[right];
+				nums[right] = nums[left];
+				nums[left++]= temp;
+			}
+			right++;
+		}
+		
+		System.out.print(Arrays.toString(Arrays.copyOf(nums,left)));
 	}
 }

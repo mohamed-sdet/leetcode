@@ -17,6 +17,43 @@ public class FindtheIndices {
 		findTwoSumTwoPinter(nums,target);
 		
 	}
+	
+	@Test
+	public void TestCase1Sorted()
+	{
+		
+		int nums[] = {1,3,5,8,9,10};
+		
+		int target = 10;
+		
+		returnSum(nums, target);
+		
+	}
+
+	private void returnSum(int[] nums,int target) {
+		// TODO Auto-generated method stub
+		
+		int left=0,right=nums.length-1;
+		
+		while(left<right)
+		{
+			int sum = nums[left]+ nums[right];
+			if(sum ==target)
+			{
+				System.out.print(left+" "+right );
+				break;
+			}else if(sum>target)
+			{
+				right--;
+			}else 
+			{
+				left++;
+			}
+				
+			
+		}
+		
+	}
 
 	private void findTwoSum(int[] nums, int target) {
 		// TODO Auto-generated method stub
