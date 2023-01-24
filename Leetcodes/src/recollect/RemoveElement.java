@@ -14,12 +14,14 @@ public class RemoveElement {
 	public void postiveTestData() 
 	{
 		
-		int [] nums = {1,2,3,5,6,8,9,2};
+		int [] nums = {2,2,2,2,2,1,2,3,2,5,6,8,9,2};
 		int target = 2;
 		
 		//removetarget(nums,target);
 		
-		removeElementUsingTwoPointer(nums,target);
+		//removeElementUsingTwoPointer(nums,target);
+		removeElementtwopointer(nums,target);
+		//remove(nums,target);
 		
 		
 	}
@@ -79,4 +81,48 @@ public class RemoveElement {
 		
 		System.out.print(Arrays.toString(Arrays.copyOf(nums,left)));
 	}
+
+	public void removeElementtwopointer(int[] nums,int target)
+	{
+	    int left = 0;
+	    int right =0;
+	    //1,2,3,5,6,8,9,2
+	    while(right<nums.length)
+	    {
+	    	if(nums[right]!=target)
+	    	{
+	    		int temp =nums[right];
+	    		nums[right]= nums[left];
+	    		nums[left++] = temp;
+	    	}
+	    	right++;
+	    }
+	    System.out.print(Arrays.toString(nums));
+	    System.out.print(Arrays.toString(Arrays.copyOf(nums, left)));
+	}
+
+    public void remove(int[] arr,int target)
+    {
+    	int start = 0, end = arr.length - 1;
+
+    	while(start < end){
+    		if(arr[start] != 2)
+    			start++;
+    		if(arr[end] == 2)
+    			end--;
+    		if(arr[start] == 2 && arr[end] != 2){
+    			//swap(arr[start] , arr[end] );
+    			int temp =arr[end];
+    			arr[end]= arr[start];
+    			arr[start++] = temp;
+    			
+    		}
+    		
+    	}
+
+    	System.out.print(Arrays.toString(Arrays.copyOfRange(arr, 0, end+1)));
+    }
+    
+    
+	
 }
