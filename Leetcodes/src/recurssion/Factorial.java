@@ -16,6 +16,9 @@ public class Factorial {
 		{
 			return 1;
 		}
+		System.out.print(n);
+		System.out.print(n-1);
+		
 		 n = n * findFactorial(n-1);
 		return n;
 	}
@@ -24,7 +27,7 @@ public class Factorial {
 	{
 		int fac=1;
 		for(int i=n;i>0;i--)
-		{
+		{	
 			fac =fac*i;
 		}
 		return fac;

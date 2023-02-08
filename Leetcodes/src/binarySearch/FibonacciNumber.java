@@ -8,7 +8,7 @@ public class FibonacciNumber {
 	public void positiveexampleData()
 	{ 
 		
-		int n=2;
+		int n=5;
 		int value = fibonacciNumber(n);
 		
 	}

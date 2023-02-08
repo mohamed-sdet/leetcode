@@ -16,7 +16,7 @@ public class Find {
 		// TODO Auto-generated method stub
 		
 		System.out.print(count(nums));
-		
+		//System.out.print(bruteforce(nums));
 	}
 	
 	public int count(int input)
@@ -26,9 +26,24 @@ public class Find {
 		
 		  int temp1 = input % 10 ;
 		  int temp2 = count(input / 10);
+		  int temp3 = temp2;
 			
 		  return temp1+temp2;
 		  
 		//return (input % 10) + count(input / 10);
+	}
+	
+	public int bruteforce(int nums)
+	{
+		int count=0;
+		while(nums>0)
+		{
+			int i = nums%10;
+			if(i==1) count++;
+			nums=nums/10;
+		}
+		
+		return count;
+		
 	}
 }
