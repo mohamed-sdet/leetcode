@@ -12,7 +12,7 @@ public class MoveZeros {
 		
 		int nums [] = {1,2,0,4,2,0,3,5};
 		
-		moveZeros1(nums);
+		moveZero2(nums);
 	}
 
 	private void moveZeros(int[] nums) {
@@ -73,4 +73,23 @@ public class MoveZeros {
 		
 		System.out.print(Arrays.toString(nums));
 	}
+
+	private void moveZero2(int [] nums)
+	{
+		int left=0;
+		int right=0;
+		while(right<nums.length)
+		{
+		 if(nums[right]!=0)
+		 {
+			 int temp = nums[right];
+			 nums[right] = nums[left];
+			 nums[left++] = temp;
+		 }
+		 right++;
+		}
+		
+		System.out.print(Arrays.toString(nums));
+	}
+
 }

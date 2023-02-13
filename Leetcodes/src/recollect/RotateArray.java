@@ -34,9 +34,10 @@ public class RotateArray {
 				temp =nums[j];
 				nums[j]=rev;
 				rev=temp;
+				System.out.println(Arrays.toString(nums));
 			}
 		}
-		System.out.print(Arrays.toString(nums));
+		//System.out.print(Arrays.toString(nums));
 		
 	}
 	

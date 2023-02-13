@@ -2,6 +2,7 @@ package map;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -29,13 +30,13 @@ public class Anagram {
 		anagram(s,k);
 		
 	}
-	
+	@Test
 	public void examplePositiveData1()
 	{
 		String s = "cbaebabacd";
 		String k = "abc";
 		
-		anagram(s,k);
+		anagram2(s,k);
 		
 	}
 	
@@ -45,7 +46,7 @@ public class Anagram {
 		String s = "abab";
 		String k = "ab";
 		
-		anagram(s,k);
+		anagram1(s,k);
 		
 	}
 //n*m
@@ -97,4 +98,52 @@ public class Anagram {
 		
 	}
 
+	private void anagram1(String s, String t)
+	{
+		HashMap<Character,Integer> smap = new HashMap<>();
+        HashMap<Character,Integer> tmap = new HashMap<>();
+        char[] sh = s.toCharArray();
+        char[] th = t.toCharArray();
+        for(int i=0;i<sh.length;i++)
+        {
+            smap.put(sh[i], smap.getOrDefault(sh[i], 0)+1);
+        }
+        for(int i=0;i<th.length;i++)
+        {
+            tmap.put(th[i], tmap.getOrDefault(th[i], 0)+1);
+        }
+
+        if(smap.equals(tmap))
+        {
+            System.out.print("Anagram");
+        }else
+        {
+        	 System.out.print("not anagram");
+        }
+        
+        for(Map.Entry<Character,Integer> ch : smap.entrySet())
+        {
+        	System.out.println("keys:" + ch.getKey()+ "values:" +ch.getValue());
+        	
+        }
+	}
+
+	private boolean anagram2(String s, String t)
+	{
+		if(s.length() != t.length()) return false;
+        int[] ascii_array = new int[26];
+        
+        for(char c : s.toCharArray())
+        {
+            ascii_array[c-'a']++;
+        }
+        
+        for(char c: t.toCharArray())
+        {
+            if(ascii_array[c-'a']==0) return false;
+          ascii_array[c-'a']--;
+        }
+        
+        return true;
+	}
 }
