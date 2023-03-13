@@ -1,5 +1,8 @@
 package string;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import org.junit.Test;
 
 public class RemoveDuplicate {
@@ -44,5 +47,24 @@ public class RemoveDuplicate {
 		System.out.print(t);
 	}
 
+	
+	@Test
+	public void setremoveDuplicate()
+	{  String s = "Programming";
+		Set<Character> set = new HashSet();
+		StringBuilder sb = new StringBuilder();
+		for(int i=0;i<s.length();i++ )
+		{
+			set.add(s.charAt(i));
+		}
+		
+		
+		for(Character el : set)
+		{
+			sb.append(el);
+		}
+		
+		System.out.print(sb);
+	}
 
 }
