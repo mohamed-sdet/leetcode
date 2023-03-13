@@ -1,5 +1,8 @@
 package string;
 
+import java.util.HashMap;
+import java.util.Map.Entry;
+
 import org.junit.Test;
 
 public class FirstNonRepatingCharacter {
@@ -35,4 +38,28 @@ public class FirstNonRepatingCharacter {
 		
 	}
 
+	
+	@Test
+	public void nonRepeatingMethod2()
+	{
+		String s = "abcdacdcz";
+		
+		HashMap<Character,Integer> map = new HashMap<>();
+		
+		for(int i=0;i<s.length();i++)
+		{
+			map.put(s.charAt(i), map.getOrDefault(s.charAt(i), 0)+1);
+		}
+		
+		for(Entry<Character,Integer> entrySet : map.entrySet())
+		{
+			if(entrySet.getValue() ==1)
+			{
+				System.out.print(entrySet.getKey());
+				break;
+			}
+		}
+			
+	
+	}
 }
