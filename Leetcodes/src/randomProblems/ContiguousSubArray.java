@@ -47,7 +47,7 @@ public class ContiguousSubArray {
 			 sum += s[i];
 			 if(sum>k)
 			 {
-				 sum  = sum - s[left];
+				 sum  = sum - s[left++];
 			 }
 			 
 			 if(sum == k)
@@ -69,7 +69,9 @@ public class ContiguousSubArray {
 		for(int i = 0; i < arr.length; i++) {
 			
 			sum = sum + arr[i];
-			
+			//8
+			//4,4,4
+			//0,1,2
 			while(sum >= s) {
 				min = Math.min(min, i - left + 1);
 				sum = sum - arr[left++];			
@@ -81,6 +83,28 @@ public class ContiguousSubArray {
 		else
 			System.out.println(min);
 		 
+	 }
+	
+	public static void findMinLengthofSumBruteForce(int s, int[] arr) {
+		 
+		 int sum = 0;
+		 int min = Integer.MAX_VALUE;
+		 for(int i = 0; i < arr.length; i++){
+		 	for(int j = i; j < arr.length; j++){
+		 		sum = sum + arr[j];
+		 		//System.out.println(sum);
+		 		if(sum >= s){
+		 			min = Math.min(min, j - i + 1);
+		 			//System.out.println("Min -->" + min);
+		 			break;
+		 		}
+		 	}
+		 	sum = 0;
+		 }
+		 	if(min == Integer.MAX_VALUE)
+		 		return;
+		 	else
+		 		System.out.println(min);
 	 }
 	 
 	 
