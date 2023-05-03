@@ -35,8 +35,7 @@ public class GroupAnagram {
 			{
 				char[] ch2 = s[k].toCharArray();
 				HashMap<Character,Integer> map2 = new HashMap<>();
-				
-				
+
 			}
 		}
 	}

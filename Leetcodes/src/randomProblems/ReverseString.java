@@ -13,7 +13,7 @@ public class ReverseString {
 	{
 		String s="this is a test class";
 		
-		reverseString(s);
+		reverserString1(s);
 	}
 
 	private void reverseString(String s) {
@@ -43,6 +43,18 @@ public class ReverseString {
 			ch[left++] = temp;
 		}
 		return String.copyValueOf(ch); 
+	}
+	
+	public void reverserString1(String s)
+	{
+	    StringBuilder sb = new StringBuilder();
+		
+		for(int i=s.length()-1;i>=0;i--)
+		{
+			sb = sb.append(s.charAt(i));
+		}
+		
+		System.out.print(sb);
 	}
 
 }

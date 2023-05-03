@@ -11,7 +11,7 @@ public class Reverse {
 	{
 		String s ="hello";
 		
-		reverseTwoPointer(s);
+		exampleData(s);
 	}
 
 	private void reverseCharAt(String s) {
@@ -40,4 +40,21 @@ public class Reverse {
 		System.out.print(String.copyValueOf(ch));
 	}
 
+	public void exampleData(String s)
+	{
+		char [] ch = s.toCharArray();
+		
+		int left =0;
+		int right = ch.length-1;
+		
+		while(left<right)
+		{
+			char temp = ch[right];
+			ch[right--] = ch[left];
+			ch[left++] = temp;
+			
+		}
+			
+		System.out.print(String.copyValueOf(ch));
+	}
 }

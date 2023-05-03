@@ -11,7 +11,7 @@ public class BubbleSort {
 		int[] nums = {2,1,4,3,6,5,8,7};
 		
 		//bubbleSort(nums);
-		bubbleSort3(nums);
+		bubbleSorts(nums);
 		
 		
 	}
@@ -68,6 +68,28 @@ public class BubbleSort {
 			}
 		}
 		System.out.print(Arrays.toString(nums));
+	}
+	
+	
+	public void bubbleSorts(int [] num)
+	{
+		for(int i=0;i<num.length;i++)
+		{
+			for(int j=1;j<num.length;j++)
+			{
+				
+				if(num[j-1]>num[j])
+				{
+					int temp = num[j];
+					num[j] =num[j-1];
+					num[j-1]=temp;
+							
+				}
+			}
+		}
+		
+		System.out.print(Arrays.toString(num));
+		
 	}
 	
 }
